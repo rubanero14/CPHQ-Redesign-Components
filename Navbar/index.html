@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/index.css">
+</head>
+<body>
+    <header class="navbar-expand-md">
+        <div class="row">
+            <div class="col-4">
+                <span class="logo">{{ LOGO }}</span>
+            </div>
+            <!-- Navigation PC View Section -->
+            <div class="col-8 d-none d-md-block">
+                <nav class="main__nav desktop-nav d-none d-md-block">
+                    <ul class="main__nav_list">
+                        <li class="main__nav_listItem">
+                            <svg class="main__nav_icon" width="24" height="23" viewBox="0 0 24 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.90458 8.52344C4.32542 8.52344 4.66658 8.8646 4.66658 9.28544V20.5249H8.47658V14.8099C8.47658 14.3047 8.67728 13.8202 9.03454 13.4629C9.3918 13.1056 9.87634 12.9049 10.3816 12.9049H14.1916C14.6968 12.9049 15.1814 13.1056 15.5386 13.4629C15.8959 13.8202 16.0966 14.3047 16.0966 14.8099V20.5249H19.9066V9.28544C19.9066 8.8646 20.2477 8.52344 20.6686 8.52344C21.0894 8.52344 21.4306 8.8646 21.4306 9.28544V20.5249C21.4306 20.9291 21.27 21.3168 20.9842 21.6026C20.6984 21.8884 20.3108 22.0489 19.9066 22.0489H15.3346C14.9137 22.0489 14.5726 21.7078 14.5726 21.2869V14.8099C14.5726 14.7089 14.5324 14.612 14.461 14.5405C14.3895 14.4691 14.2926 14.4289 14.1916 14.4289H10.3816C10.2805 14.4289 10.1836 14.4691 10.1122 14.5405C10.0407 14.612 10.0006 14.7089 10.0006 14.8099V21.2869C10.0006 21.7078 9.65942 22.0489 9.23858 22.0489H4.66658C4.26239 22.0489 3.87475 21.8884 3.58895 21.6026C3.30314 21.3168 3.14258 20.9291 3.14258 20.5249V9.28544C3.14258 8.8646 3.48374 8.52344 3.90458 8.52344Z"
+                                    fill="#0B74B9" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.3434 1.1255L16.0974 3.76184V2.23752C16.0974 1.81668 16.4386 1.47552 16.8594 1.47552H19.1454C19.5663 1.47552 19.9074 1.81668 19.9074 2.23752V7.40897L23.4823 10.8311C23.7864 11.1221 23.7969 11.6044 23.5059 11.9085C23.2149 12.2125 22.7325 12.223 22.4285 11.932L12.3027 2.23902C12.298 2.23861 12.293 2.23837 12.2877 2.23836C12.2822 2.23835 12.2769 2.23859 12.2722 2.23901L2.14634 11.932C1.84234 12.223 1.35998 12.2125 1.06897 11.9085C0.77796 11.6044 0.788495 11.1221 1.0925 10.8311L11.2322 1.12487C11.543 0.809741 11.9666 0.713778 12.2904 0.714358C12.6129 0.714936 13.035 0.811687 13.3434 1.1255ZM18.3834 5.95012V2.99952H17.6214V5.22069L18.3834 5.95012Z"
+                                    fill="#0B74B9" />
+                            </svg>
+                        </li>
+                        <li class="main__nav_listItem has-sub-nav">
+                            <span>Nav 1</span>
+                            <ul class="dropdown">
+                                <li class="sub-nav has-sub-nav">
+                                    <span>Sub Nav 1</span>
+                                    <ul class="dropdown">
+                                        <li class="sub-nav has-sub-nav">
+                                            <span>Sub Nav 2</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main__nav_listItem has-sub-nav">
+                            <span>Nav 2</span>
+                        </li>
+                        <li class="main__nav_listItem has-sub-nav">
+                            <span>Nav 3</span>
+                        </li>
+                        <li class="main__nav_listItem has-sub-nav">
+                            <span>Nav 4</span>
+                        </li>
+                        <li class="main__nav_listItem has-sub-nav">
+                            <span>Nav 5</span>
+                            <ul class="dropdown">
+                                <li class="sub-nav has-sub-nav">
+                                    <span>Sub Nav 1</span>
+                                    <ul class="dropdown">
+                                        <li class="sub-nav has-sub-nav">
+                                            <span>Sub Nav 2</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main__nav_listItem">
+                            <span class="me-2">USER</span>
+                            <svg class="main__nav_icon" width="26" height="28" viewBox="0 0 26 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.1815 0.999987C5.87023 0.901237 -0.0985186 6.86999 0.000231381 14.1812C0.0977314 21.1931 5.80711 26.9025 12.819 27C20.1315 27.1 26.099 21.1312 25.999 13.82C25.9027 6.80686 20.1934 1.09749 13.1815 0.999987ZM21.0827 21.4531C21.0578 21.48 21.0273 21.5012 20.9934 21.515C20.9594 21.5288 20.9228 21.5349 20.8862 21.533C20.8495 21.5311 20.8138 21.5212 20.7814 21.5039C20.7491 21.4867 20.7209 21.4625 20.699 21.4331C20.1399 20.7017 19.4553 20.0755 18.6771 19.5837C17.0859 18.5625 15.0696 18 13.0002 18C10.9309 18 8.91461 18.5625 7.32336 19.5837C6.54515 20.0753 5.86054 20.7013 5.30148 21.4325C5.27952 21.4619 5.25136 21.486 5.21901 21.5033C5.18667 21.5206 5.15091 21.5305 5.11429 21.5324C5.07767 21.5343 5.04108 21.5282 5.00711 21.5143C4.97314 21.5005 4.94263 21.4794 4.91773 21.4525C3.08378 19.4727 2.04492 16.8858 2.00023 14.1875C1.89836 8.10561 6.88898 3.01499 12.9734 2.99999C19.0577 2.98499 24.0002 7.92561 24.0002 14C24.0023 16.7634 22.9602 19.4255 21.0827 21.4531Z"
+                                    fill="#0B74B9" />
+                                <path
+                                    d="M13.0003 7C11.7678 7 10.6534 7.46188 9.86152 8.30125C9.06965 9.14063 8.67402 10.3012 8.7634 11.5469C8.94465 14 10.8453 16 13.0003 16C15.1553 16 17.0521 14 17.2371 11.5475C17.3296 10.3137 16.9371 9.16375 16.1321 8.30875C15.3371 7.465 14.2246 7 13.0003 7Z"
+                                    fill="#0B74B9" />
+                            </svg>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Navbar Toggler Section -->
+            <div class="col-8 d-block d-md-none text-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Navbar X Icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                        <path fill-rule="evenodd"
+                            d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                    </svg>
+                    <!-- Navbar Burger Icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Navigation Mobile View Section -->
+            <div class="d-block d-md-none">
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav">
+                        <li>
+                            <div class="d-flex justify-content-between accordion nav-button">
+                                <p>NAV 1</p>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                            <div class="panel">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="d-flex justify-content-between accordion nav-button drop-nav">
+                                            <p>NESTED SUBNAV 1</p>
+                                            <i class="bi bi-chevron-right"></i>
+                                        </div>
+                                        <div class="panel">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <p class="nav-button drop-nav-nested">SUBNAV 1.1</a>
+                                                </li>
+                                                <li>
+                                                    <p class="nav-button drop-nav-nested">SUBNAV 1.2</a>
+                                                </li>
+                                                <li>
+                                                    <p class="nav-button drop-nav-nested">SUBNAV 1.3</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-button">NAV 2</a>
+                        </li>
+                        <li>
+                            <div class="nav-button">NAV 3</a>
+                        </li>
+                        <li>
+                            <div class="nav-button">NAV 4</a>
+                        </li>
+                        <li>
+                            <div class="d-flex justify-content-between accordion nav-button  sovereign-btn">
+                                <p>NAV 5</p>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                            <div class="panel">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="d-flex justify-content-between accordion nav-button drop-nav">
+                                            <p>NESTED SUBNAV 1</p>
+                                            <i class="bi bi-chevron-right"></i>
+                                        </div>
+                                        <div class="panel">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <p class="nav-button drop-nav-nested">SUBNAV 1.1</a>
+                                                </li>
+                                                <li>
+                                                    <p class="nav-button drop-nav-nested">SUBNAV 1.2</a>
+                                                </li>
+                                                <li>
+                                                    <p class="nav-button drop-nav-nested">SUBNAV 1.3</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="./index.js" defer></script>
+</html>
