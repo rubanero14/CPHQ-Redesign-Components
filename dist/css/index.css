@@ -12,39 +12,46 @@
   --font-Roboto: "Roboto", sans-serif;
 }
 
-.centered, .main__nav_listItem {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-Roboto);
+}
+
+.centered, .main__nav_listItem, .desktop-nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-transition, .hidden, .visible {
+.nav-transition, .hidden, .main__nav_list .dropdown-1,
+.main__nav_list .dropdown-2,
+.main__nav_list .dropdown-3,
+.main__nav_list .dropdown-4, .visible, .has-sub-nav-4:hover .dropdown-4, .has-sub-nav-3:hover .dropdown-3, .has-sub-nav-2:hover .dropdown-2, .has-sub-nav-1:hover .dropdown-1 {
   transition: ease-in 0.35s;
   -moz-transition: ease-in 0.35s;
   -webkit-transition: ease-in 0.35s;
   z-index: 99999;
 }
 
-.reset, p, .main__nav_list, *, .hidden, .visible {
-  margin: 0;
-  padding: 0;
-}
-
-.visible {
+.visible, .has-sub-nav-4:hover .dropdown-4, .has-sub-nav-3:hover .dropdown-3, .has-sub-nav-2:hover .dropdown-2, .has-sub-nav-1:hover .dropdown-1 {
   opacity: 1;
   visibility: visible;
-  height: auto;
   width: 180px;
 }
 
-.hidden {
+.hidden, .main__nav_list .dropdown-1,
+.main__nav_list .dropdown-2,
+.main__nav_list .dropdown-3,
+.main__nav_list .dropdown-4 {
   opacity: 0;
   visibility: hidden;
+  width: 0;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: var(--font-Roboto);
+p {
+  margin-bottom: 0px;
 }
 
 .bi {
@@ -63,10 +70,63 @@
   /*   width: 200px; */
 }
 
+/*Desktop Section*/
+.desktop-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-right: 0;
+}
+
 .main__nav_list {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.main__nav_list .dropdown-1,
+.main__nav_list .dropdown-2,
+.main__nav_list .dropdown-3,
+.main__nav_list .dropdown-4 {
+  list-style: none;
+  padding-left: 0;
+}
+.main__nav_list .dropdown-1 {
+  position: absolute;
+  top: 74px;
+  left: 0px;
+  width: 180px;
+}
+.main__nav_list .dropdown-2,
+.main__nav_list .dropdown-3,
+.main__nav_list .dropdown-4 {
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  width: 180px;
+}
+
+/* Number of Sub Nav Levels & dynamic styling through looping */
+.main__nav_listItem:hover,
+.active,
+.sub-nav-1:hover {
+  background: rgb(231, 241, 248);
+}
+
+.main__nav_listItem:hover,
+.active,
+.sub-nav-2:hover {
+  background: rgb(231, 241, 248);
+}
+
+.main__nav_listItem:hover,
+.active,
+.sub-nav-3:hover {
+  background: rgb(231, 241, 248);
+}
+
+.main__nav_listItem:hover,
+.active,
+.sub-nav-4:hover {
+  background: rgb(231, 241, 248);
 }
 
 .main__nav_listItem {
@@ -75,20 +135,30 @@
   padding: 20px 15px;
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  color: #828282;
   line-height: 15px;
+  position: relative;
+  cursor: pointer;
 }
-.main__nav_listItem a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-}
-
-nav li {
+.main__nav_listItem li {
   display: inline-block;
+  position: relative;
   box-shadow: var(--box-shadow);
   width: 100%;
+  padding: 10px 15px;
+}
+.main__nav_listItem a {
+  display: inline-block;
+  text-decoration: none;
+  color: #828282;
+  width: 100%;
+}
+.main__nav_listItem:hover, .main__nav_listItem.active {
+  height: 74px;
+  border-radius: 4px;
+  border-bottom: 3px solid #0b74b9;
+}
+.main__nav_listItem:last-child {
+  border-left: 1px solid #f2f2f2;
 }
 
 /*Mobile Section*/
@@ -144,7 +214,7 @@ div.accordion.active .bi-chevron-right::before {
   content: "\f282";
 }
 
-.nav-button, .panel .drop-nav-nested, .panel .drop-nav {
+.nav-button, .panel .drop-nav-nested-6, .panel .drop-nav-nested-5, .panel .drop-nav-nested-4, .panel .drop-nav-nested-3, .panel .drop-nav-nested-2, .panel .drop-nav-nested-1, .panel .drop-nav {
   display: block;
   padding: 10px 15px;
   width: 100%;
@@ -161,10 +231,26 @@ div.navbar-collapse .btn:focus {
 .panel {
   display: none;
   overflow: hidden;
+  /* Number of Sub Nav Levels & dynamic styling through looping */
 }
 .panel .drop-nav {
-  padding: 10px 15px 10px 40px;
+  padding: 10px 15px 10px 30px;
 }
-.panel .drop-nav-nested {
+.panel .drop-nav-nested-1 {
+  padding: 10px 15px 10px 45px;
+}
+.panel .drop-nav-nested-2 {
   padding: 10px 15px 10px 60px;
+}
+.panel .drop-nav-nested-3 {
+  padding: 10px 15px 10px 75px;
+}
+.panel .drop-nav-nested-4 {
+  padding: 10px 15px 10px 90px;
+}
+.panel .drop-nav-nested-5 {
+  padding: 10px 15px 10px 105px;
+}
+.panel .drop-nav-nested-6 {
+  padding: 10px 15px 10px 120px;
 }/*# sourceMappingURL=index.css.map */

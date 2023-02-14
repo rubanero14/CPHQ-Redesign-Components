@@ -1,18 +1,28 @@
 // Making custom accordion using javascript
-const acc = document.querySelectorAll(".accordion");
-const toggler = document.querySelector(".navbar-toggler");
-const navbar = document.querySelector(".navbar-expand-md");
+const accordions = document.querySelectorAll(".accordion");
+const listItems = document.querySelectorAll(".main__nav_listItem");
+const activeListItems = document.querySelectorAll(".main__nav_listItem.active");
+const nav = document.querySelector(".navbar-expand-md nav");
+
+if (nav.classList.contains("desktop-nav")) {
+  for (const li of listItems) {
+    for (const ali of activeListItems) {
+      li.addEventListener("click", () => {
+        ali.classList.remove("active");
+      });
+    }
+  }
+}
 
 // Logic for mobile navbar nested navigation
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", () => {
-    acc[i].classList.toggle("active");
-    const panel = acc[i].nextElementSibling;
+for (const accordion of accordions) {
+  if (nav.classList.contains("desktop-nav")) {
+    nav.classList.toggle("desktop-nav");
+  }
+
+  accordion.addEventListener("click", () => {
+    accordion.classList.toggle("active");
+    const panel = accordion.nextElementSibling;
     panel.style.display = panel.style.display === "block" ? "none" : "block";
   });
 }
-
-// Mobile navigation toggler logic
-toggler.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-});
